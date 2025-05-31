@@ -38,8 +38,16 @@
 }
 @layer base {
   html {
-    font-family: "poppins", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     @apply overflow-x-hidden;
+  }
+
+  p {
+    @apply font-space-grotesk;
+  }
+
+  h1, h3, h4, h5, h6 {
+    @apply font-space-grotesk;
   }
 
   li {
@@ -47,19 +55,19 @@
   }
 
   button {
-    @apply font-Space-Grotesk font-[500];
+    @apply font-space-grotesk font-[500];
   }
 
   h2 {
-    @apply text-center text-[38px] font-bold font-Space-Grotesk;
+    @apply text-center text-[38px] font-bold font-space-grotesk;
   }
 
   .offer h4 {
-    @apply text-[30px] font-bold font-Space-Grotesk mb-5 mr-0 md:mr-20;
+    @apply text-[30px] font-bold font-space-grotesk mb-5 mr-0 md:mr-20;
   }
 
   .token-details h4 {
-    @apply text-[30px] font-semibold font-Space-Grotesk pb-5;
+    @apply text-[30px] font-semibold font-space-grotesk pb-5;
   }
 
   .token-details h6 {
@@ -71,10 +79,10 @@
   }
 
   .graph-price h4 {
-    @apply text-[20px] font-semibold font-Space-Grotesk text-[#197ddb];
+    @apply text-[20px] font-semibold font-space-grotesk text-[#197ddb];
   }
 
   .graph-price h6 {
-    @apply text-[24px] font-semibold font-Poppins text-[#616161];
+    @apply text-[24px] font-semibold font-poppins text-[#616161];
   }
 }

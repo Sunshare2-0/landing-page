@@ -8,7 +8,7 @@ const Acquisition = () => {
           Daily Forecast on Energy Acquisition
         </h1>
         <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full h-auto font-Poppins font-normal text-[15px] sm:text-left sm:text-[13px] drop-shadow-xl ">
-          Prediciting how much energy can be acquired throughout the day. This
+          Predicting how much energy can be acquired throughout the day. This
           helps manage the electricity consumed daily through reports that
           include the total energy consumed by every household device
           --providing an efficient method for monitoring and budgeting the

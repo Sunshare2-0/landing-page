@@ -12,7 +12,7 @@ const Offered = () => {
   });
 
   return (
-    <div className="w-full h-full flex flex-col justify-between">
+    <div className="w-full h-full flex flex-col justify-between font-space-grotesk">
       <div className="offer pt-20 px-5 lg:px-30 xl:px-40 md:text-start 2xl:px-52 2xl:pb-32">
         {/* start title */}
         <div
@@ -64,13 +64,12 @@ const Offered = () => {
               </p>
               <button
                 className="mt-[30px] px-6 py-2
-														drop-shadow-xl
-														bg-lime-600
-														text-white
-														transition-all
-														hover:bg-lime-500
-														rounded-lg
-														"
+                           drop-shadow-xl
+                           bg-lime-600
+                           text-white
+                           transition-all
+                           hover:bg-lime-500
+                           rounded-lg"
               >
                 See More
               </button>
@@ -98,13 +97,12 @@ const Offered = () => {
               </p>
               <button
                 className="mt-[30px] px-6 py-2
-															drop-shadow-xl
-															bg-lime-600
-															text-white
-															transition-all
-															hover:bg-lime-500
-															rounded-lg
-															"
+                           drop-shadow-xl
+                           bg-lime-600
+                           text-white
+                           transition-all
+                           hover:bg-lime-500
+                           rounded-lg"
               >
                 See More
               </button>
@@ -147,13 +145,12 @@ const Offered = () => {
               </p>
               <button
                 className="mt-[30px] px-6 py-2
-															drop-shadow-xl
-															bg-lime-600
-															text-white
-															transition-all
-															hover:bg-lime-500
-															rounded-lg
-															"
+                           drop-shadow-xl
+                           bg-lime-600
+                           text-white
+                           transition-all
+                           hover:bg-lime-500
+                           rounded-lg"
               >
                 See More
               </button>

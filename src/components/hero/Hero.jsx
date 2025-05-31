@@ -40,7 +40,7 @@ const Hero = () => {
             Make the Future Brighter with Sunshare!
           </h1>
 
-          <p className="mt-[10px] sm:mt-[30px] font-Poppins font-normal text-[15px] text-center sm:text-left sm:text-[20px] drop-shadow-xl background-image mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-72">
+          <p className="mt-[10px] sm:mt-[30px] font-Space-Grotesk font-normal text-[15px] text-center sm:text-left sm:text-[20px] drop-shadow-xl background-image mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-72">
             ​A renewable energy blockchain marketplace application for a clean
             community.
           </p>

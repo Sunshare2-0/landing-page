@@ -13,7 +13,7 @@ const SunShareSection = ({ onClickToImage }) => {
       <h1 className="mt-32 sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center lg:text-left sm:text-[50px] mr-0 lg:mr-4 xl:mr-8 2xl:mr-10">
         Meet the people behind Sunshare
       </h1>
-      <p className="w-full mt-[10px] sm:mt-[30px] lg:pr-[10rem] font-Poppins font-normal lg:text-left sm:text-[20px] drop-shadow-xl text-center">
+      <p className="w-full mt-[10px] sm:mt-[30px] lg:pr-[10rem] font-Space-Grotesk font-normal lg:text-left sm:text-[20px] drop-shadow-xl text-center">
         A renewable energy marketplace through a blockchain application to
         manage, secure and improve the buy-and-sell solar energy experience
         among users. The main objective of this application is to promote

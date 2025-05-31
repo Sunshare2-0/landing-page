@@ -22,11 +22,9 @@ module.exports = {
     },
 
     fontFamily: {
-      "Space-Grotesk": [
-        "'Space Grotesk', sans-serif",
-        ...defaultThemes.fontFamily.sans,
-      ],
-      Poppins: ["'Poppins', sans-serif", ...defaultThemes.fontFamily.sans],
+      sans: ["Space Grotesk", "sans-serif", ...defaultThemes.fontFamily.sans],
+      "space-grotesk": ["Space Grotesk", "sans-serif", ...defaultThemes.fontFamily.sans],
+      poppins: ["Poppins", "sans-serif", ...defaultThemes.fontFamily.sans],
     },
   },
   plugins: [],
