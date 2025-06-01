@@ -32,8 +32,7 @@ const Offered = () => {
           </div>
           <h2>What We Offer</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Transforming energy access through a decentralized platform for transparent, community-driven solar trading and smart management
           </p>
         </div>
         {/* end title */}

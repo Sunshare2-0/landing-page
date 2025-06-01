@@ -58,7 +58,7 @@ const Navbar = ({ setToDark, isDark }) => {
           <NavLink to={"/"}>
             {/* replace this line of code (↓) with this (↑) if deployed with own domain then go to MenuItems.js to change the url for the props*/}
             {/* <NavLink to={"/landing-page"}> */}
-            <img src={logo} alt="logo" className="w-full" />
+            <img src={logo} alt="logo" className="w-full ml-5" />
           </NavLink>
         </div>
 
@@ -144,7 +144,7 @@ const Navbar = ({ setToDark, isDark }) => {
           </div>
           <button
 			onClick={() => window.open('http://192.168.55.83:3000', '_blank').focus()}
-            className="px-6 py-2
+            className="px-6 py-2 mr-5 
                            bg-[#FEA803]
                            text-white
                            border-2 border-black

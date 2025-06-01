@@ -142,8 +142,7 @@ const Graph = ({ isLoading }) => {
           >
             <h2>Sunshare Market Performance</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Unveiling the evolving impact and growth of decentralized solar energy through dynamic performance insights
             </p>
           </div>
           <div
