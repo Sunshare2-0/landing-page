@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "../components/hero/Hero";
 import Maindata from "../components/maindata/Maindata";
 import Graph from "../components/maindata/Graph";
+import Problem from "../components/problem/Problem";
 import Offered from "../components/offered/Offered";
 import Token from "../components/token/Token";
 import Partner from "../components/partner/Partner";
@@ -24,6 +25,12 @@ const Home = () => {
         <div className="container m-auto">
           <Maindata />
           <Graph />
+        </div>
+      </div>
+
+      <div className="w-full bg-white text-black text-center drop-shadow-[0_-4px_4px_rgba(0,0,0,0.25)] dark:bg-[#0D1F31] dark:text-white">
+        <div className="container m-auto">
+          <Problem />
         </div>
       </div>
 
@@ -56,7 +63,7 @@ const Home = () => {
         <GreyArea />
       </div>
 
-      <div className="w-full bg-white text-black text-center dark:bg-[#243447] dark:text-white">
+      <div className="w-full text-center">
         <div className="container m-auto">
           <Newsletter />
         </div>
