@@ -53,7 +53,7 @@ const Navbar = ({ setToDark, isDark }) => {
       className="w-screen h-[100px] z-10 dark:bg-[#243447] bg-slate-50 fixed drop-shadow-lg"
       data-aos="fade-down">
       {/* start normal navbar */}
-      <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">
+      <div className="container mx-auto flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           <NavLink to={"/"}>
             {/* replace this line of code (↓) with this (↑) if deployed with own domain then go to MenuItems.js to change the url for the props*/}
@@ -152,7 +152,7 @@ const Navbar = ({ setToDark, isDark }) => {
                            hover:bg-[#F7931E]
                            rounded-lg
                            ">
-            Launch App
+            Get Started
           </button>
         </div>
 
