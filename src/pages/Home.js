@@ -19,9 +19,7 @@ const Home = () => {
       </div>
 
       <div className="w-full bg-white text-black text-center drop-shadow-[0_-4px_4px_rgba(0,0,0,0.25)] dark:bg-[#0D1F31] dark:text-white">
-        <div className="container m-auto">
-          <Offered />
-        </div>
+        <Offered />
       </div>
 
       <div className="w-full bg-white text-black text-center dark:bg-[#0D1F31] dark:text-white">

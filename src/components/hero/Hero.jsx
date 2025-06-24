@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 max-w-[1920px] m-auto drop-shadow-xl">
         {/* Start Hero Title */}
         <div
-          className="flex flex-col justify-center md:items-start w-full h-full px-2 py-8"
+          className="flex flex-col justify-center md:items-start w-full h-full px-2 py-8 pl-10"
           data-aos="fade-right"
           data-aos-delay="500"
           data-aos-duration="1000"
