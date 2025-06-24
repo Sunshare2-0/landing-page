@@ -6,6 +6,7 @@ import Blog from "../../pages/Blog";
 import Support from "../../pages/Support";
 import NotFound from "../../pages/NotFound";
 import MainBlog from "../blog/MainBlog";
+import Marketplace from "../../pages/Marketplace";
 
 const Navpage = () => {
   return (
@@ -21,6 +22,7 @@ const Navpage = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<MainBlog />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/marketplace" element={<Marketplace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>
