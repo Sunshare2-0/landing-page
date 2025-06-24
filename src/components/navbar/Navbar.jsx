@@ -198,7 +198,8 @@ const Navbar = ({ setToDark, isDark }) => {
             )}
           </div>
         </div>
-      </div>    
+      </div>
+
       {/* end normal navbar */}
 
       {/* start drop down menu */}

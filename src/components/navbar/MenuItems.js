@@ -9,26 +9,20 @@ export const MenuItems = [
   },
   {
     id: "2",
-    title: "About Us",
+    title: "About us",
     url: "/about",
     cName: "px-6 py-2",
   },
   {
     id: "3",
-    title: "Marketplace",
-    url: "/marketplace",
+    title: "Blog",
+    url: "/blog",
     cName: "px-6 py-2",
   },
   {
     id: "4",
-    title: "Contact Us",
-    url: "/contact",
-    cName: "px-6 py-2",
-  },
-  {
-    id: "5",
-    title: "Get Started",
-    url: "/get-started",
+    title: "Support",
+    url: "/support",
     cName: "px-6 py-2",
   },
 ];

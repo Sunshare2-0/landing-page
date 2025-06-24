@@ -22,7 +22,6 @@ const Navpage = () => {
         <Route path="/blog/:id" element={<MainBlog />} />
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<About />}/>
       </Routes>
     </React.Fragment>
   );

@@ -37,11 +37,12 @@ const Hero = () => {
           data-aos-duration="1000"
         >
           <h1 className="mt-32  sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center sm:text-left sm:text-[50px] mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-10">
-            Power Your Community. Trade Clean Energy.
+            Make the Future Brighter with Sunshare!
           </h1>
 
           <p className="mt-[10px] sm:mt-[30px] font-Space-Grotesk font-normal text-[15px] text-center sm:text-left sm:text-[20px] drop-shadow-xl background-image mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-72">
-            A blockchain-powered peer-to-peer (P2P) energy marketplace that lets you sell and buy solar energy locally—securely, transparently, and in real time.
+            ​A renewable energy blockchain marketplace application for a clean
+            community.
           </p>
 
           <button
@@ -55,7 +56,7 @@ const Hero = () => {
                            rounded-lg
                            "
           >
-            Get Early Access
+            Launch App
           </button>
 
           <div className="mt-[10px] text-center sm:mt-[30px]">
