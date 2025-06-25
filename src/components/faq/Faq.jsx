@@ -6,9 +6,9 @@ const Faq = () => {
     <div className="pt-20">
       <div className="small-title text-center">
         <div className="small-title-container">
-          <div className="left-dash text-[#FEA803] px-10 pt-1 inline">-</div>
-          <h5 className="text-2xl text-[#FEA803] inline">FAQS</h5>
-          <div className="right-dash text-[#FEA803] px-10 inline">-</div>
+          <div className="left-dash text-[#ffff] px-10 pt-1 inline">-</div>
+          <h5 className="text-2xl text-[#ffff] inline">FAQS</h5>
+          <div className="right-dash text-[#ffff] px-10 inline">-</div>
         </div>
       </div>
       <div className="large-title pb-14">
