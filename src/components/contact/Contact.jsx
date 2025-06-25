@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    location: '',
+    userType: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+  };
+
   return (
     <div className="py-20">
       <div className="small-title text-center">
@@ -10,91 +30,105 @@ const Contact = () => {
           <div className="right-dash text-[#FEA803] px-10 inline">-</div>
         </div>
       </div>
-      <div className="large-title pb-14">
-        <h2>
-          Contact <span className="text-[#FEA803]">&</span> Support
+      <div className="large-title pb-14 text-center">
+        <h2 className="text-4xl font-bold mb-4">
+          Join the Clean Energy Movement
         </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Be among the first to trade solar energy in the Philippines. No cost. No risk. Just real impact.
+        </p>
       </div>
-      {/*  */}
-      <form className="w-full lg:max-w-4xl lg:mx-auto">
+      
+      <form onSubmit={handleSubmit} className="w-full lg:max-w-2xl lg:mx-auto">
         <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="w-full px-3 mb-6">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-first-name">
+              htmlFor="name">
               Name
             </label>
             <input
-              className="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
-              type="text"
-              placeholder="Name"
-            />
-          </div>
-          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-last-name">
-              Company
-            </label>
-            <input
               className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-last-name"
+              id="name"
+              name="name"
               type="text"
-              placeholder="Company"
+              placeholder="Your full name"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
           </div>
         </div>
+        
         <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full  mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="w-full px-3 mb-6">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-first-name">
-              Mail
-            </label>
-            <input
-              className="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
-              type="text"
-              placeholder="Mail"
-            />
-          </div>
-          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-last-name">
-              Phone
+              htmlFor="email">
+              Email
             </label>
             <input
               className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-last-name"
-              type="text"
-              placeholder="Phone"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="your.email@example.com"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
           </div>
         </div>
-        <div className="flex flex-wrap -mx-3">
-          <div className="w-full mx-auto md:w-10/12 lg:w-full px-3">
+        
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full px-3 mb-6">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-last-name">
-              Message
+              htmlFor="location">
+              Location
             </label>
-            <textarea
-              className="form-control block resize-none w-full py-3 px-4 mb-10 text-base font-normal text-gray-700 bg-white border rounded transition ease-in-out m-0 focus:outline-none focus:bg-white focus:border-gray-500"
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="How can we help?"></textarea>
+            <input
+              className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="location"
+              name="location"
+              type="text"
+              placeholder="City, Province"
+              value={formData.location}
+              onChange={handleChange}
+              required
+            />
           </div>
         </div>
+        
+        <div className="flex flex-wrap -mx-3 mb-8">
+          <div className="w-full px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="userType">
+              Are you a:
+            </label>
+            <select
+              className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="userType"
+              name="userType"
+              value={formData.userType}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select your role</option>
+              <option value="solar-owner">Solar Owner</option>
+              <option value="consumer">Consumer</option>
+              <option value="partner">Partner</option>
+            </select>
+          </div>
+        </div>
+        
         <div className="btn-container flex flex-wrap">
-          <div className="w-full mx-auto md:w-10/12 lg:w-full text-right">
+          <div className="w-full text-center">
             <button
-              className="py-3 px-10 rounded-md bg-[#000] text-white"
+              className="py-4 px-8 rounded-lg bg-[#FEA803] text-white font-semibold text-lg hover:bg-[#e69500] transition-colors duration-200"
               type="submit">
-              Submit
+              Apply for Early Access
             </button>
           </div>
         </div>
