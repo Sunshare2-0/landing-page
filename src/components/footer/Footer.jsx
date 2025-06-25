@@ -44,9 +44,16 @@ const Footer = () => {
           <div className="support mt-20 mx-5 md:mt-0">
             <h4 className="list-title">Support</h4>
             <ul className="md:mx-2">
-              <li>FAQ</li>
-              <li>Protocol Disclaimer</li>
-              <li>Trademark Policy</li>
+              <li>About sunshare</li>
+              <NavLink
+                to="/support"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }>
+                FAQ
+              </NavLink>
+              <li>Regulatory Disclosures</li>
+              <li>Terms & Privacy</li>
               <li className="font-semibold">Contact Us</li>
               <li>projectsunshare@uc-bcf.edu.ph</li>
               <li>uc.projectsunshare@gmail.com</li>
