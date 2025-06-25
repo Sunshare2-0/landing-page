@@ -1,12 +1,12 @@
 import React from "react";
 
-const Results = () => (
-  <div className="text-left appearance-none block w-full bg-[#D9D9D9] border rounded-b-lg py-5 px-4 mb-3 leading-tight">
-    <p>Test</p>
+const Results = ({ answer }) => (
+  <div className="text-left appearance-none block w-full bg-[#D9D9D9] border rounded-b-lg py-5 px-4 mb-3 leading-tight whitespace-pre-line">
+    <p>{answer}</p>
   </div>
 );
 
-const Faqbutton = () => {
+const Faqbutton = ({ question, answer }) => {
   const [showResults, setShowResults] = React.useState(false);
   const onClick = () => setShowResults(!showResults);
   return (
@@ -14,7 +14,7 @@ const Faqbutton = () => {
       <button
         onClick={onClick}
         className="text-left appearance-none block w-full bg-[#000] text-[#FEA803] border rounded-lg py-5 px-4 mb-1 leading-tight">
-        <p className="inline">What is Sunshare?</p>
+        <p className="inline">{question}</p>
         <svg
           className="ml-2 w-4 h-4 inline"
           aria-hidden="true"
@@ -29,7 +29,7 @@ const Faqbutton = () => {
             d="M19 9l-7 7-7-7"></path>
         </svg>
       </button>
-      {showResults && <Results />}
+      {showResults && <Results answer={answer} />}
     </div>
   );
 };

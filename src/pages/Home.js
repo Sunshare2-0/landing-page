@@ -2,7 +2,8 @@ import React from "react";
 
 import Hero from "../components/hero/Hero";
 import Offered from "../components/offered/Offered";
-import Token from "../components/token/Token";
+import OurSolution from "../components/offered/OurSolution";
+import HowItWorks from "../components/offered/HowItWorks";
 import Partner from "../components/partner/Partner";
 import Blog from "../components/blog/Blog";
 import Divider1 from "../components/divider/Divider1";
@@ -18,14 +19,14 @@ const Home = () => {
         </div>
       </div>
 
+      <Offered />
+
       <div className="w-full bg-white text-black text-center drop-shadow-[0_-4px_4px_rgba(0,0,0,0.25)] dark:bg-[#0D1F31] dark:text-white">
-        <Offered />
+        <OurSolution />
       </div>
 
       <div className="w-full bg-white text-black text-center dark:bg-[#0D1F31] dark:text-white">
-        <div className="container m-auto">
-          <Token />
-        </div>
+        <HowItWorks />
       </div>
 
       <div className="w-full bg-[#0D527C] dark:bg-[#02314D]">
