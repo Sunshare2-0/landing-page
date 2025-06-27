@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Features from "./features/Features";
-import SunShare from "./SunShare";
 
 const SunShareSection = ({ onClickToImage }) => {
   return (
@@ -24,8 +23,6 @@ const SunShareSection = ({ onClickToImage }) => {
       {/*--Title End--*/}
 
       <Features onClickToImage={onClickToImage} />
-      <SunShare />
-
       {/*--Content--*/}
     </div>
   );

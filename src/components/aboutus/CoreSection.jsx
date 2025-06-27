@@ -4,142 +4,64 @@ import programmer from "../../assets/img/about/coreteam/programmer.png";
 import proj_devt_offr from "../../assets/img/about/coreteam/proj_devt_offr.png";
 import proj_devt from "../../assets/img/about/coreteam/proj_devt.png";
 import project_engr from "../../assets/img/about/coreteam/project_engr.png";
-import React, { useState } from "react";
-import { useEffect } from "react";
-import OverheadButton from "./OverheadButton";
-import CoreInformation from "./CoreInformation";
+import React, { useState, useRef, useEffect } from "react";
+
+const team = [
+  {
+    name: "Dr. Thelma D. Palaoag",
+    role: "Project Leader",
+    phone: "+639456712357",
+    email: "tdpalaoag@uc-bcf.edu.ph",
+    img: project_lead,
+  },
+  {
+    name: "Earl P. Siachongco",
+    role: "Project Computer Programmer",
+    phone: "+639754231562",
+    email: "epsiachongco@uc-bcf.edu.ph",
+    img: programmer,
+  },
+  {
+    name: "Sophia Marie F. Arellano",
+    role: "Project Development Officer",
+    phone: "+639245470231",
+    email: "sfarellano@uc-bcf.edu.ph",
+    img: proj_devt_offr,
+  },
+  {
+    name: "Rodney A. Doyaoen",
+    role: "Project Development Officer",
+    phone: "+639433490231",
+    email: "radoyaoen@uc-bcf.edu.ph",
+    img: proj_devt,
+  },
+  {
+    name: "Michael James Deus",
+    role: "Project Staff",
+    phone: "+639798542345",
+    email: "mjdeus@uc-bcf.edu.ph",
+    img: project_engr,
+  },
+];
 
 const CoreSection = () => {
-  const getPositionInImage = (pxLocation, pyLocation) => {
-    const imgElem = document.querySelector("#sunshare_team_img");
-    const cw = imgElem.clientWidth;
-    const ch = imgElem.clientHeight;
-    const iw = imgElem.naturalWidth;
-    const ih = imgElem.naturalHeight;
+  const [open, setOpen] = useState(false);
+  const teamGridRef = useRef(null);
 
-    const x = (pxLocation * cw) / iw;
-    const y = (pyLocation * ch) / ih;
-
-    //Viewport width unit (vw) = 100 * (Pixel Unit Size / Viewport width)
-    const vw = 100 * (x / window.innerWidth);
-    const vy = 100 * (y / window.innerHeight);
-    return [vw, vy];
-  };
-
-  const [teamImagesPosition, setImagePosition] = useState({
-    firstPosition: [0, 0],
-    secondPosition: [0, 0],
-    thirdPosition: [0, 0],
-    fourthPosition: [0, 0],
-    fifthPosition: [0, 0],
-  });
-
-  //
   useEffect(() => {
-    setImagePosition({
-      firstPosition: [getPositionInImage(3800, 970)],
-      secondPosition: getPositionInImage(3154, 1017),
-      thirdPosition: getPositionInImage(2520, 1130),
-      fourthPosition: getPositionInImage(1796, 1029),
-      fifthPosition: getPositionInImage(1100, 1029),
-    });
-  }, []);
-
-  const getNaturalHeightAndWidth = (event) => {
-    const imgElem = document.querySelector("#sunshare_team_img");
-    const bounds = imgElem.getBoundingClientRect();
-    const left = bounds.left;
-    const top = bounds.top;
-    const x = event.pageX - left - window.scrollX;
-    const y = event.pageY - top - window.scrollY;
-    const cw = imgElem.clientWidth;
-    const ch = imgElem.clientHeight;
-    const iw = imgElem.naturalWidth;
-    const ih = imgElem.naturalHeight;
-    const px = (x / cw) * iw;
-    const py = (y / ch) * ih;
-    const x2 = (px * cw) / iw;
-
-    return [px, py];
-  };
-
-  const [image, setImage] = useState({});
-
-  const initialPerson = {
-    proj_devt_offr: false,
-    proj_devt: false,
-    project_lead: false,
-    programmer: false,
-    project_engr: false,
-  };
-
-  const [person, setPerson] = useState(initialPerson);
-
-  const initialValues = {
-    name: "",
-    title: "",
-    contact: "",
-    email: "",
-  };
-
-  const [text, setText] = useState(initialValues);
-
-  const teamInfo = [
-    [
-      "Rodney A. Doyaoen",
-      "Project Development Officer",
-      "+639433490231",
-      "radoyaoen@uc-bcf.edu.ph",
-    ],
-    [
-      "Sophia Marie F. Arellano",
-      "Project Development Officer",
-      "+639245470231",
-      "sfarellano@uc-bcf.edu.ph",
-    ],
-    [
-      "Dr. Thelma D. Palaoag",
-      "Project Leader",
-      "+639456712357",
-      "tdpalaoag@uc-bcf.edu.ph",
-    ],
-    [
-      "Earl P. Siachongco",
-      "Project Computer Programmer",
-      "+639754231562",
-      "epsiachongco@uc-bcf.edu.ph",
-    ],
-    [
-      "Michael James Deus",
-      "Project Staff",
-      "+639798542345",
-      "mjdeus@uc-bcf.edu.ph",
-    ],
-  ];
-
-  function getText() {
-    let counter = 0;
-    for (let key in initialPerson) {
-      if (initialPerson[key] == true) {
-        break;
-      }
-      counter += 1;
+    if (open && teamGridRef.current) {
+      setTimeout(() => {
+        teamGridRef.current.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }, 100);
     }
-    let newText = {
-      name: teamInfo[counter][0],
-      title: teamInfo[counter][1],
-      contact: teamInfo[counter][2],
-      email: teamInfo[counter][3],
-    };
-    setText(newText);
-  }
+  }, [open]);
 
-  function handleChange(picture, who) {
-    initialPerson[who] = !initialPerson[who];
-    setImage(picture);
-    setPerson(initialPerson);
-    getText();
-  }
+  const handleAccordionClick = () => {
+    setOpen((o) => !o);
+  };
 
   return (
     <div className="w-full flex flex-col dark:bg-[#243447] justify-items-center align-items-center">
@@ -147,64 +69,51 @@ const CoreSection = () => {
         <h4 className="font-Space-Grotesk font-black text-amber-500 text-center xl:text-[20px]">
           — Team —
         </h4>
-        <h1 className="w-full font-Space-Grotesk font-black text-center xl:text-[30px]">
-          The Sunshare Team
-        </h1>
-      </div>
-
-      <div className="mx-auto relative">
-        <div
-          className="relative drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]"
-          onClick={getNaturalHeightAndWidth}>
-          <img
-            id="sunshare_team_img"
-            src={sunshareteam}
-            className="w-[100vw] h-auto"
-            alt="acquisition"
-            onLoad={() => {
-              setImagePosition({
-                firstPosition: getPositionInImage(3800, 870),
-                secondPosition: getPositionInImage(3154, 917),
-                thirdPosition: getPositionInImage(2520, 1030),
-                fourthPosition: getPositionInImage(1796, 929),
-                fifthPosition: getPositionInImage(1100, 929),
-              });
-            }}
-          />
-
-          <OverheadButton
-            leftPos={`${teamImagesPosition.firstPosition[0]}`}
-            topPos={`${teamImagesPosition.firstPosition[1]}`}
-            handleChange={() => handleChange(project_engr, "project_engr")}
-          />
-
-          <OverheadButton
-            leftPos={`${teamImagesPosition.secondPosition[0]}`}
-            topPos={`${teamImagesPosition.secondPosition[1]}`}
-            handleChange={() => handleChange(programmer, "programmer")}
-          />
-
-          <OverheadButton
-            leftPos={`${teamImagesPosition.thirdPosition[0]}`}
-            topPos={`${teamImagesPosition.thirdPosition[1]}`}
-            handleChange={() => handleChange(project_lead, "project_lead")}
-          />
-
-          <OverheadButton
-            leftPos={`${teamImagesPosition.fourthPosition[0]}`}
-            topPos={`${teamImagesPosition.fourthPosition[1]}`}
-            handleChange={() => handleChange(proj_devt, "proj_devt")}
-          />
-
-          <OverheadButton
-            leftPos={`${teamImagesPosition.fifthPosition[0]}`}
-            topPos={`${teamImagesPosition.fifthPosition[1]}`}
-            handleChange={() => handleChange(proj_devt_offr, "proj_devt_offr")}
-          />
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <h1 className="font-Space-Grotesk font-black text-center xl:text-[30px]">
+            The Sunshare Team
+          </h1>
+        </div>
+        <div className="flex items-center justify-center gap-4 mb-8">
+        <button
+            className="flex items-center gap-2 px-6 py-4 bg-[#FEA803] text-white font-bold rounded-full shadow hover:bg-[#e69500] transition text-2xl"
+            onClick={handleAccordionClick}
+            aria-label="Show Sunshare Team"
+          >
+            <span className="text-2xl">i</span>
+          </button>
         </div>
       </div>
-
-      <CoreInformation text={text} image={image} />
+      <div className="mx-auto relative w-full max-w-[100rem]">
+        <img
+          id="sunshare_team_img"
+          src={sunshareteam}
+          className="w-full h-auto shadow mb-8"
+          alt="Sunshare Team"
+        />
+      </div>
+      <div className="w-[100rem] mx-auto my-8">
+        {open && (
+          <div ref={teamGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {team.map((member) => (
+              <div
+                key={member.email}
+                className="bg-white rounded-xl shadow p-3 flex flex-col items-center"
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-[450px] h-[250px] object-cover mb-4 shadow rounded-xl"
+                />
+                <div className="font-bold text-3xl text-[#0D1F31] text-center">{member.name}</div>
+                <div className="text-[#FEA803] font-semibold mb-2">{member.role}</div>
+                <div className="text-gray-700 text-sm mb-1">{member.phone}</div>
+                <div className="text-gray-700 text-sm">{member.email}</div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

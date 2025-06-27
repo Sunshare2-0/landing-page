@@ -26,7 +26,7 @@ const About = () => {
       </div>
       <div
         ref={section2}
-        className="resize-none w-full bg-[#E5E4E2] drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
+        className="resize-none w-full bg-[#E5E4E2]">
         <div className="w-full	">
           <CoreSection />
         </div>

@@ -8,14 +8,14 @@ import supportBg from "../assets/img/support/Support_bg.jpg";
 
 const Support = () => {
   return (
-    <div
+      <div
       className="w-full min-h-screen dark:text-white"
-      style={{
+        style={{
         backgroundImage: `url(${supportBg})`,
-        backgroundSize: "cover",
+          backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
-      }}>
+        }}>
       <div className="w-full h-screen flex items-center justify-center">
         <div className="container m-auto">
           <SupportSect />
@@ -35,7 +35,7 @@ const Support = () => {
             style={{ backgroundColor: 'rgba(255, 193, 1, 0.73)' }}
           >
             <div className="p-8 lg:p-12 pb-20 lg:pb-20">
-              <Faq />
+          <Faq />
             </div>
           </div>
         </div>
