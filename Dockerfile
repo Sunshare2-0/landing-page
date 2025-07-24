@@ -1,24 +1,35 @@
-# Build stage
-FROM node:18 AS builder
+# Base image with Node.js
+FROM node:18 AS build
+
+# Set working directory inside container
 WORKDIR /app
 
-# Copy dependency files first
+# Copy package files and install dependencies
 COPY package.json yarn.lock ./
-
-# Install dependencies
 RUN yarn install
 
-# Copy all project files
+# Copy the rest of the project files
 COPY . .
 
-# Disable CI mode to prevent eslint warnings from failing build
-ENV CI=false
+# Build the React app for production
+RUN yarn build
 
-# Build the React app
-RUN yarn run build
+# -----------------------------
 
-# Serve with nginx
+# Stage 2: Serve with a lightweight web server
 FROM nginx:alpine
-COPY --from=builder /app/build /usr/share/nginx/html
+
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy built React app to nginx folder
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Copy custom nginx config (optional)
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose port 80 for Railway
 EXPOSE 80
+
+# Start nginx server
 CMD ["nginx", "-g", "daemon off;"]
