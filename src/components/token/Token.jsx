@@ -34,10 +34,9 @@ const Token = () => {
           <div className="text-left ml-0 md:ml-20">
             <h4>Sunshare Token</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Sunshare Token is a digital currency that makes it easy for people to buy and sell solar energy within the Sunshare platform.
+              Instead of using cash, users pay with tokens, which represent a certain amount of electricity.
+              These tokens are tracked using blockchain, a secure and transparent system that ensures every energy transaction is verified, fair, and trustworthy.
             </p>
             <h6>Learn more about Sunshare Token.</h6>
             <button className="w-10 h-10 border rounded-full bg-[#012E46] drop-shadow-xl transition-all hover:bg-[#0D527C]">
