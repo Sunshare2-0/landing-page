@@ -19,12 +19,12 @@ export const MenuItems = [
     url: "/marketplace",
     cName: "px-6 py-2",
   },
-  {
-    id: "4",
-    title: "Blog",
-    url: "/blog",
-    cName: "px-6 py-2",
-  },
+  // {
+  //   id: "4",
+  //   title: "Blog",
+  //   url: "/blog",
+  //   cName: "px-6 py-2",
+  // },
   {
     id: "5",
     title: "Support",
