@@ -8,22 +8,17 @@ const Acquisition = () => {
           Daily Forecast on Energy Acquisition
         </h1>
         <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full h-auto font-Poppins font-normal text-[15px] sm:text-left sm:text-[13px] drop-shadow-xl ">
-          Predicting how much energy can be acquired throughout the day. This
-          helps manage the electricity consumed daily through reports that
-          include the total energy consumed by every household device
-          --providing an efficient method for monitoring and budgeting the
-          resource wisely.
+          Predicts how much solar energy your system can collect throughout the day based on weather forecasts,
+          historical data, and your current solar panel setup. A personalized report shows expected energy availability hour by hour,
+          helping you allocate electricity to appliances more efficiently—preventing shortages and maximizing solar usage.
+          Users are notified when production may drop due to overcast skies or technical inefficiencies and
+          receive suggestions to adapt usage accordingly.
           <br></br>
           <br></br>
-          Facilisis magna etiam tempor orci eu lobortis elementum. Sagittis orci
-          a scelerisque purus semper eget duis. Ligula ullamcorper malesuada
-          proin libero nunc. Facilisis volutpat est velit egestas dui id ornare
-          arcu. Vitae sapien pellentesque habitant morbi tristique senectus et
-          netus et. Eu augue ut lectus arcu bibendum at varius. Ut morbi
-          tincidunt augue interdum velit euismod in pellentesque. Mi ipsum
-          faucibus vitae aliquet nec ullamcorper sit amet risus. Vel pretium
-          lectus quam id leo in vitae turpis massa. Faucibus ornare suspendisse
-          sed nisi lacus sed viverra tellus. Nunc sed id semper risus in.
+          Integrated reports summarize which appliances consumed the most electricity and suggest scheduling improvements
+          to optimize energy savings. The forecast adjusts dynamically based on sensor data from the inverter and battery.
+          This feature empowers households to plan their energy usage better, avoid over-reliance on grid supply, and improve
+          long-term energy budgeting. Notifications and visual charts simplify tracking, helping users stay energy-aware throughout the day.
         </p>
       </div>
 

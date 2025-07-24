@@ -26,14 +26,14 @@ const team = [
     role: "Project Development Officer",
     phone: "+639245470231",
     email: "sfarellano@uc-bcf.edu.ph",
-    img: proj_devt_offr,
+    img: proj_devt,
   },
   {
     name: "Rodney A. Doyaoen",
     role: "Project Development Officer",
     phone: "+639433490231",
     email: "radoyaoen@uc-bcf.edu.ph",
-    img: proj_devt,
+    img: proj_devt_offr,
   },
   {
     name: "Michael James Deus",

@@ -8,28 +8,19 @@ const MarketPlace = () => {
           Blockchain Marketplace Feature
         </h1>
         <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full xl:h-[60] font-Poppins font-normal text-[15px] sm:text-left sm:text-[13px] drop-shadow-xl ">
-          Showing nearby and newest listings of those who want to sell
-          electricity along wit relevant information that support
-          decision-making. Transactions are stored securely and verified with
-          smart contracts. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Sed adipiscing diam donec adipiscing tristique. Sed felis eget
-          velit aliquet. Risus commodo viverra maecenas accumsan lacus vel
-          facilisis volutpat est. Non consectetur a erat nam at lectus urna
-          duis. Pellentesque id nibh tortor id aliquet lectus proin. Ultricies
-          tristique nulla aliquet enim tortor. Ut tortor pretium viverra
-          suspendisse potenti nullam ac tortor vitae.
+          Shows nearby and the latest listings of individuals offering surplus solar energy.
+          Each listing includes energy quantity, price in Sunshare Tokens, and estimated delivery time.
+          Transactions are recorded securely on the blockchain and verified through smart contracts to ensure transparency and prevent fraud.
+          Smart contract automation guarantees both buyer and seller protection by locking the energy and tokens until both
+           parties fulfill their commitments. A map-based interface helps users find energy sellers within range.
+           Listings refresh in real-time to reflect current energy availability and demand.
           <br></br>
           <br></br>
-          Facilisis magna etiam tempor orci eu lobortis elementum. Sagittis orci
-          a scelerisque purus semper eget duis. Ligula ullamcorper malesuada
-          proin libero nunc. Facilisis volutpat est velit egestas dui id ornare
-          arcu. Vitae sapien pellentesque habitant morbi tristique senectus et
-          netus et. Eu augue ut lectus arcu bibendum at varius. Ut morbi
-          tincidunt augue interdum velit euismod in pellentesque. Mi ipsum
-          faucibus vitae aliquet nec ullamcorper sit amet risus. Vel pretium
-          lectus quam id leo in vitae turpis massa. Faucibus ornare suspendisse
-          sed nisi lacus sed viverra tellus. Nunc sed id semper risus in.
+          Secure trading is further enhanced with energy ratings, availability forecasts, and seller profiles.
+          Transactions are recorded with full traceability, and decentralized ledger technology ensures all records are tamper-proof.
+          Each exchange uses Sunshare Token as currency, tracked by blockchain verification and linked to smart meters for accuracy.
+          Users can also see estimated cost savings, delivery time, and carbon reduction per transaction.
+          The marketplace empowers communities to share excess power, reduce dependency on large grids, and move toward decentralized energy independence.
         </p>
       </div>
 
