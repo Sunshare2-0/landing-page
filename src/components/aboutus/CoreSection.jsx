@@ -4,7 +4,7 @@ import programmer from "../../assets/img/about/coreteam/programmer.png";
 import proj_devt_offr from "../../assets/img/about/coreteam/proj_devt_offr.png";
 import proj_devt from "../../assets/img/about/coreteam/proj_devt.png";
 import project_engr from "../../assets/img/about/coreteam/project_engr.png";
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 
 const team = [
   {
@@ -45,24 +45,6 @@ const team = [
 ];
 
 const CoreSection = () => {
-  const [open, setOpen] = useState(false);
-  const teamGridRef = useRef(null);
-
-  useEffect(() => {
-    if (open && teamGridRef.current) {
-      setTimeout(() => {
-        teamGridRef.current.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
-        });
-      }, 100);
-    }
-  }, [open]);
-
-  const handleAccordionClick = () => {
-    setOpen((o) => !o);
-  };
-
   return (
     <div className="w-full flex flex-col dark:bg-[#243447] justify-items-center align-items-center">
       <div className="mt-[8vh]">
@@ -74,15 +56,6 @@ const CoreSection = () => {
             The Sunshare Team
           </h1>
         </div>
-        <div className="flex items-center justify-center gap-4 mb-8">
-        <button
-            className="flex items-center gap-2 px-6 py-4 bg-[#FEA803] text-white font-bold rounded-full shadow hover:bg-[#e69500] transition text-2xl"
-            onClick={handleAccordionClick}
-            aria-label="Show Sunshare Team"
-          >
-            <span className="text-2xl">i</span>
-          </button>
-        </div>
       </div>
       <div className="mx-auto relative w-full max-w-[100rem]">
         <img
@@ -93,26 +66,24 @@ const CoreSection = () => {
         />
       </div>
       <div className="w-[100rem] mx-auto my-8">
-        {open && (
-          <div ref={teamGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {team.map((member) => (
-              <div
-                key={member.email}
-                className="bg-white rounded-xl shadow p-3 flex flex-col items-center"
-              >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-[450px] h-[250px] object-cover mb-4 shadow rounded-xl"
-                />
-                <div className="font-bold text-3xl text-[#0D1F31] text-center">{member.name}</div>
-                <div className="text-[#FEA803] font-semibold mb-2">{member.role}</div>
-                <div className="text-gray-700 text-sm mb-1">{member.phone}</div>
-                <div className="text-gray-700 text-sm">{member.email}</div>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {team.map((member) => (
+            <div
+              key={member.email}
+              className="bg-white rounded-xl shadow p-3 flex flex-col items-center"
+            >
+              <img
+                src={member.img}
+                alt={member.name}
+                className="w-[450px] h-[250px] object-cover mb-4 shadow rounded-xl"
+              />
+              <div className="font-bold text-3xl text-[#0D1F31] text-center">{member.name}</div>
+              <div className="text-[#FEA803] font-semibold mb-2">{member.role}</div>
+              <div className="text-gray-700 text-sm mb-1">{member.phone}</div>
+              <div className="text-gray-700 text-sm">{member.email}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
