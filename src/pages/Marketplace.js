@@ -3,6 +3,7 @@ import Graph from "../components/maindata/Graph";
 import Maindata from "../components/maindata/Maindata";
 import WhatWeOffer from "../components/offered/WhatWeOffer";
 import Token from "../components/token/Token";
+import Newsletter from "../components/newsletter/Newsletter";
 
 const Marketplace = () => {
   return (
@@ -21,6 +22,12 @@ const Marketplace = () => {
       <div className="w-full bg-white text-black text-center dark:bg-[#0D1F31] dark:text-white">
         <div className="container m-auto">
           <Token />
+        </div>
+      </div>
+
+      <div className="w-full bg-white text-black text-center dark:bg-[#243447] dark:text-white">
+        <div className="container m-auto">
+          <Newsletter />
         </div>
       </div>
     </React.Fragment>
