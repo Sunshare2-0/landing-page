@@ -7,7 +7,7 @@ const MarketPlace = () => {
         <h1 className="font-Space-Grotesk font-black text-left xl:text-[30px]">
           Blockchain Marketplace Feature
         </h1>
-        <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full xl:h-[60] font-Poppins font-normal text-[15px] sm:text-left sm:text-[13px] drop-shadow-xl ">
+        <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full xl:h-[60] font-Poppins font-normal text-[15px] sm:text-left sm:text-[17px] drop-shadow-xl ">
           Shows nearby and the latest listings of individuals offering surplus solar energy.
           Each listing includes energy quantity, price in Sunshare Tokens, and estimated delivery time.
           Transactions are recorded securely on the blockchain and verified through smart contracts to ensure transparency and prevent fraud.

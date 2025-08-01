@@ -6,7 +6,7 @@ const Demand = () => {
         <h1 className="font-Space-Grotesk font-black text-left xl:text-[30px]">
           Future Forecast on Energy Demands
         </h1>
-        <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full h-auto font-Poppins font-normal text-[15px] sm:text-left sm:text-[13px] drop-shadow-xl ">
+        <p className="pr-5 pb-5 pt-5  flex flex-col justify-items-center w-full h-auto font-Poppins font-normal text-[15px] sm:text-left sm:text-[17px] drop-shadow-xl ">
           Predicts the energy demand of your home or community over the next few days using usage trends,
           time-of-day patterns, and previous weather conditions. These insights help manage battery reserves
           and schedule energy-intensive tasks during off-peak or surplus production hours. Users receive reports
