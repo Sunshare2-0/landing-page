@@ -5,7 +5,7 @@ import Offered from "../components/offered/Offered";
 import OurSolution from "../components/offered/OurSolution";
 import HowItWorks from "../components/offered/HowItWorks";
 import Partner from "../components/partner/Partner";
-import Blog from "../components/blog/Blog";
+// import Blog from "../components/blog/Blog";
 import Divider1 from "../components/divider/Divider1";
 import GreyArea from "../components/divider/GreyArea";
 import Newsletter from "../components/newsletter/Newsletter";
@@ -35,11 +35,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full dark:bg-[#0d1f31] dark:text-white">
+      {/* <div className="w-full dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <Blog />
         </div>
-      </div>
+      </div> */}
 
       <div className="w-full">
         <Divider1 />
