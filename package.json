@@ -2,6 +2,7 @@
   "name": "sunshare_reactjs_tailwindcss",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sunshare2-0.github.io/landing-page",
   "dependencies": {
     "@headlessui/react": "^1.7.5",
     "@heroicons/react": "^2.0.13",
